@@ -50,6 +50,43 @@
       -ms-overflow-style: none;
       scrollbar-width: none;
     }
+        /* Khóa cứng màu nút Tab Active trên Mobile & Desktop */
+    .proof-tab-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1rem;
+      border-radius: 0.75rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1rem;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: #ffffff !important;
+      color: #334155 !important;
+      border: 1px solid #e2e8f0 !important;
+    }
+    .proof-tab-btn:hover {
+      background-color: #f8fafc !important;
+      color: #0f172a !important;
+      border-color: #cbd5e1 !important;
+    }
+    .proof-tab-btn.active {
+      background-color: #01a915 !important;
+      color: #ffffff !important;
+      border-color: #01a915 !important;
+      box-shadow: 0 2px 5px -1px rgba(1, 169, 21, 0.4) !important;
+      font-weight: 700 !important;
+    }
+    .proof-tab-btn.active:hover {
+      background-color: #019012 !important;
+      color: #ffffff !important;
+    }
+
     .browser-frame {
       border-radius: 14px;
       overflow: hidden;
@@ -1141,16 +1178,16 @@
 
       <!-- Proof Interactive Tabs -->
       <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
-        <button onclick="switchProofTab('products', this)" class="proof-tab-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-[#01a915] text-white shadow-xs whitespace-nowrap">
+        <button onclick="switchProofTab('products', this)" data-tab="products" class="proof-tab-btn active px-4 py-2 rounded-xl text-xs font-bold transition-all bg-[#01a915] text-white shadow-xs whitespace-nowrap">
           🖥️ Sản Phẩm Thực Tế (7)
         </button>
-        <button onclick="switchProofTab('data', this)" class="proof-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+        <button onclick="switchProofTab('data', this)" data-tab="data" class="proof-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
           📊 Dữ Liệu & Phân Tích (7)
         </button>
-        <button onclick="switchProofTab('feedback', this)" class="proof-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+        <button onclick="switchProofTab('feedback', this)" data-tab="feedback" class="proof-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
           💬 Phản Hồi Khách Hàng (5)
         </button>
-        <button onclick="switchProofTab('automation', this)" class="proof-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
+        <button onclick="switchProofTab('automation', this)" data-tab="automation" class="proof-tab-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap">
           ⚙️ Công Cụ Tự Động Hóa
         </button>
       </div>
@@ -1693,13 +1730,24 @@
     });
 
     // 2. Proof of Work Tab Switcher
-    function switchProofTab(tabName, btn) {
-      document.querySelectorAll('.proof-tab-btn').forEach(b => {
-        b.classList.remove('active', 'bg-[#01a915]', 'text-white');
-        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-      });
-      btn.classList.add('active', 'bg-[#01a915]', 'text-white');
-      btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+    function switchProofTab(tabName, btn, updateHash = false) {
+      const allBtns = document.querySelectorAll('.proof-tab-btn');
+      
+      let targetBtn = btn;
+      if (!targetBtn || !(targetBtn instanceof HTMLElement)) {
+        targetBtn = document.querySelector(`.proof-tab-btn[data-tab="${tabName}"]`);
+      }
+      if (!targetBtn && allBtns.length > 0) {
+        targetBtn = allBtns[0];
+      }
+
+      allBtns.forEach(b => b.classList.remove('active'));
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+        try {
+          targetBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } catch(e) {}
+      }
 
       const panels = {
         'products': document.getElementById('proof-products'),
@@ -1717,6 +1765,68 @@
           }
         }
       });
+
+      if (updateHash) {
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', '#' + tabName);
+        }
+      }
+    }
+
+    // Hỗ trợ Hash Deep-link cho Bản 2 (Storytelling)
+    const V2_HASH_MAP = {
+      'fec': 'case-07',
+      'fec-explorer': 'case-07',
+      'case-fec': 'case-07',
+      'case-fec-explorer': 'case-07',
+      'sunam': 'case-01',
+      'case-sunam': 'case-01',
+      'hongphat': 'case-02',
+      'hong-phat': 'case-02',
+      'phuclee': 'case-03',
+      'phuc-lee': 'case-03',
+      'eyelash': 'case-04',
+      'hafood': 'case-05',
+      'alphatic': 'case-06',
+      'google-ads': 'case-studies',
+      'ads': 'case-studies',
+      'case-studies': 'case-studies',
+      'selected-work': 'selected-work',
+      'proof': 'proof-of-work',
+      'proof-of-work': 'proof-of-work',
+      'products': 'proof-of-work',
+      'data': 'proof-of-work',
+      'feedback': 'proof-of-work',
+      'automation': 'proof-of-work'
+    };
+
+    function handleV2Hash() {
+      const hash = (window.location.hash || '').replace('#', '').trim().toLowerCase();
+      if (!hash) return;
+
+      if (['products', 'data', 'feedback', 'automation'].includes(hash)) {
+        switchProofTab(hash, null, false);
+      }
+
+      let targetId = V2_HASH_MAP[hash] || hash;
+      const targetEl = document.getElementById(targetId);
+      if (targetEl) {
+        setTimeout(() => {
+          const headerOffset = 80;
+          const elementPosition = targetEl.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }, 60);
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', handleV2Hash);
+    window.addEventListener('hashchange', handleV2Hash);
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(handleV2Hash, 10);
     }
   </script>
 

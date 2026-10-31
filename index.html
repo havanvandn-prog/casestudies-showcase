@@ -81,6 +81,43 @@
     ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
     /* Khung giả lập trình duyệt MacOS sang trọng */
+        /* Nút Tab Bộ Lọc Chuyên Nghiệp — Khóa cứng Active Xanh Lá trên Mobile & Desktop */
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.45rem 0.95rem;
+      border-radius: 0.625rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+      line-height: 1rem;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      background-color: #ffffff !important;
+      color: #334155 !important;
+      border: 1px solid #e2e8f0 !important;
+    }
+    .filter-btn:hover {
+      background-color: #f8fafc !important;
+      color: #0f172a !important;
+      border-color: #cbd5e1 !important;
+    }
+    .filter-btn.active {
+      background-color: #01a915 !important;
+      color: #ffffff !important;
+      border-color: #01a915 !important;
+      box-shadow: 0 2px 5px -1px rgba(1, 169, 21, 0.4) !important;
+      font-weight: 700 !important;
+    }
+    .filter-btn.active:hover {
+      background-color: #019012 !important;
+      color: #ffffff !important;
+    }
+
     .browser-frame {
       border: 1px solid #e2e8f0;
       border-radius: 12px;
@@ -193,22 +230,22 @@
     <!-- INTERACTIVE FILTER TABS (EASY AI STYLE) -->
     <nav class="sticky top-16 z-30 bg-slate-50/95 backdrop-blur-md py-2.5 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-slate-200 shadow-2xs no-print flex items-center gap-2 overflow-x-auto no-scrollbar">
       <div class="flex items-center gap-2 shrink-0">
-        <button onclick="filterCategory('all', this)" class="filter-btn active px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all bg-[#01a915] text-white shadow-xs whitespace-nowrap shrink-0">
+        <button data-category="all" onclick="filterCategory('all', this)" class="filter-btn active">
           ✨ Tất Cả Hồ Sơ
         </button>
-        <button onclick="filterCategory('profile', this)" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap shrink-0">
+        <button data-category="profile" onclick="filterCategory('profile', this)" class="filter-btn">
           👤 Câu Chuyện Nghề
         </button>
-        <button onclick="filterCategory('google-ads', this)" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap shrink-0">
+        <button data-category="google-ads" onclick="filterCategory('google-ads', this)" class="filter-btn">
           🚀 Google Ads & Chuyển Đổi (7)
         </button>
-        <button onclick="filterCategory('seo', this)" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap shrink-0">
+        <button data-category="seo" onclick="filterCategory('seo', this)" class="filter-btn">
           📈 SEO & Organic Traffic (4)
         </button>
-        <button onclick="filterCategory('feedback', this)" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap shrink-0">
+        <button data-category="feedback" onclick="filterCategory('feedback', this)" class="filter-btn">
           💬 Phản Hồi Khách Hàng (5)
         </button>
-        <button onclick="filterCategory('matrix', this)" class="filter-btn px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition-all whitespace-nowrap shrink-0">
+        <button data-category="matrix" onclick="filterCategory('matrix', this)" class="filter-btn">
           📊 Bảng Ma Trận Số Liệu
         </button>
       </div>
@@ -622,7 +659,7 @@
       </article>
 
       <!-- Case 2: HaFood B2B Trung Thu -->
-      <article class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
+      <article id="case-hafood" class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-3 mb-5">
           <div>
             <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase block">CASE 02 • QUÀ TẶNG DOANH NGHIỆP & B2B SỈ</span>
@@ -886,7 +923,7 @@
       </article>
 
       <!-- Case 5: Eyelash Đà Nẵng -->
-      <article class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
+      <article id="case-eyelash-ads" class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-3 mb-5">
           <div>
             <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase block">CASE 05 • DỊCH VỤ LÀM ĐẸP DU LỊCH CHO KHÁCH TÂY</span>
@@ -974,7 +1011,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         
         <!-- Case 6: Thuê Xe Đà Nẵng -->
-        <article class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs transition-all hover:shadow-sm flex flex-col justify-between">
+        <article id="case-thue-xe" class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs transition-all hover:shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between gap-2 border-b border-slate-100 pb-2.5 mb-3">
               <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase">CASE 05 • DỊCH VỤ CHO THUÊ XE DU LỊCH</span>
@@ -1007,7 +1044,7 @@
         </article>
 
         <!-- Case 7: Orange Prints US -->
-        <article class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs transition-all hover:shadow-sm flex flex-col justify-between">
+        <article id="case-orange-prints" class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs transition-all hover:shadow-sm flex flex-col justify-between">
           <div>
             <div class="flex items-center justify-between gap-2 border-b border-slate-100 pb-2.5 mb-3">
               <span class="text-xs font-bold text-emerald-600 tracking-wider uppercase">CASE 06 • ECOMMERCE THỊ TRƯỜNG MỸ (US)</span>
@@ -1061,7 +1098,7 @@
       </div>
 
       <!-- Case 1: Hủ Tiếu Hồng Phát -->
-      <article class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
+      <article id="case-hong-phat" class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-3 mb-5">
           <div>
             <span class="text-xs font-bold text-blue-600 tracking-wider uppercase block">SEO CASE 01 • CHUỖI F&B TRUYỀN THỐNG</span>
@@ -1150,7 +1187,7 @@
       </article>
 
       <!-- Case 2: Alphatic B2B Tech -->
-      <article class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
+      <article id="case-alphatic" class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-3 mb-5">
           <div>
             <span class="text-xs font-bold text-blue-600 tracking-wider uppercase block">SEO CASE 02 • B2B & GIẢI PHÁP CÔNG NGHỆ DOANH NGHIỆP</span>
@@ -1239,7 +1276,7 @@
       </article>
 
       <!-- Case 3: Eyelash Đà Nẵng SEO -->
-      <article class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
+      <article id="case-eyelash-seo" class="bg-white border border-slate-200 rounded-2xl p-5 sm:p-6 shadow-xs transition-all hover:shadow-sm">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-3 mb-5">
           <div>
             <span class="text-xs font-bold text-blue-600 tracking-wider uppercase block">SEO CASE 03 • DỊCH VỤ LÀM ĐẸP DU KHÁCH QUỐC TẾ</span>
@@ -1328,7 +1365,7 @@
       </article>
 
       <!-- Case 4: SuNam Spa Local SEO -->
-      <article class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs transition-all hover:shadow-sm">
+      <article id="case-sunam-seo" class="bg-white border border-slate-200 rounded-2xl p-5 shadow-xs transition-all hover:shadow-sm">
         <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 border-b border-slate-100 pb-3 mb-4">
           <div>
             <span class="text-xs font-bold text-blue-600 tracking-wider uppercase block">SEO CASE 04 • LOCAL SEO ĐÀ NẴNG & HỘI AN</span>
@@ -1787,15 +1824,81 @@
       }
     });
 
-    // 2. Filter Tabs Functionality
-    function filterCategory(category, btn) {
-      document.querySelectorAll('.filter-btn').forEach(b => {
-        b.classList.remove('active', 'bg-[#01a915]', 'text-white');
-        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
-      });
-      btn.classList.add('active', 'bg-[#01a915]', 'text-white');
-      btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+    // 2. Filter Tabs & Deep-link Routing
+    const HASH_ROUTES = {
+      'all': { cat: 'all', target: null },
+      'tat-ca': { cat: 'all', target: null },
+      'profile': { cat: 'profile', target: 'section-profile' },
+      'cau-chuyen-nghe': { cat: 'profile', target: 'section-profile' },
+      've-toi': { cat: 'profile', target: 'section-profile' },
+      'google-ads': { cat: 'google-ads', target: 'section-google-ads' },
+      'ads': { cat: 'google-ads', target: 'section-google-ads' },
+      'googleads': { cat: 'google-ads', target: 'section-google-ads' },
+      'seo': { cat: 'seo', target: 'section-seo' },
+      'feedback': { cat: 'feedback', target: 'section-feedback' },
+      'phan-hoi': { cat: 'feedback', target: 'section-feedback' },
+      'matrix': { cat: 'matrix', target: 'section-matrix' },
+      'bang-so-lieu': { cat: 'matrix', target: 'section-matrix' },
+      'so-lieu': { cat: 'matrix', target: 'section-matrix' },
+      // Case Studies cụ thể
+      'fec': { cat: 'google-ads', target: 'case-fec-explorer' },
+      'fec-explorer': { cat: 'google-ads', target: 'case-fec-explorer' },
+      'case-fec-explorer': { cat: 'google-ads', target: 'case-fec-explorer' },
+      'du-hoc-fec': { cat: 'google-ads', target: 'case-fec-explorer' },
+      'trai-he-fec': { cat: 'google-ads', target: 'case-fec-explorer' },
+      'sunam': { cat: 'google-ads', target: 'case-sunam-spa' },
+      'sunam-spa': { cat: 'google-ads', target: 'case-sunam-spa' },
+      'case-sunam-spa': { cat: 'google-ads', target: 'case-sunam-spa' },
+      'hafood': { cat: 'google-ads', target: 'case-hafood' },
+      'case-hafood': { cat: 'google-ads', target: 'case-hafood' },
+      'phuclee': { cat: 'google-ads', target: 'case-phuc-lee' },
+      'phuc-lee': { cat: 'google-ads', target: 'case-phuc-lee' },
+      'case-phuc-lee': { cat: 'google-ads', target: 'case-phuc-lee' },
+      'eyelash-ads': { cat: 'google-ads', target: 'case-eyelash-ads' },
+      'thue-xe': { cat: 'google-ads', target: 'case-thue-xe' },
+      'orange-prints': { cat: 'google-ads', target: 'case-orange-prints' },
+      'hongphat': { cat: 'seo', target: 'case-hong-phat' },
+      'hong-phat': { cat: 'seo', target: 'case-hong-phat' },
+      'case-hong-phat': { cat: 'seo', target: 'case-hong-phat' },
+      'alphatic': { cat: 'seo', target: 'case-alphatic' },
+      'case-alphatic': { cat: 'seo', target: 'case-alphatic' },
+      'eyelash-seo': { cat: 'seo', target: 'case-eyelash-seo' },
+      'sunam-seo': { cat: 'seo', target: 'case-sunam-seo' }
+    };
 
+    function filterCategory(category, btn, updateHash = true, targetElementId = null) {
+      const allBtns = document.querySelectorAll('.filter-btn');
+      
+      // 1. Xác định nút cần active
+      let targetBtn = btn;
+      if (!targetBtn || !(targetBtn instanceof HTMLElement)) {
+        targetBtn = document.querySelector(`.filter-btn[data-category="${category}"]`);
+      }
+      if (!targetBtn && allBtns.length > 0) {
+        targetBtn = allBtns[0];
+      }
+
+      // 2. Cập nhật class active
+      allBtns.forEach(b => b.classList.remove('active'));
+      if (targetBtn) {
+        targetBtn.classList.add('active');
+        // Tự động cuộn thanh tab trên mobile để nút active lọt vào giữa tầm nhìn
+        try {
+          targetBtn.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        } catch(e) {}
+      }
+
+      // 3. Cập nhật URL Hash trên trình duyệt
+      if (updateHash) {
+        const hashToSet = targetElementId ? targetElementId : (category === 'all' ? 'all' : category);
+        if (window.history && window.history.replaceState) {
+          window.history.replaceState(null, '', '#' + hashToSet);
+        } else {
+          window.location.hash = '#' + hashToSet;
+        }
+      }
+
+      // 4. Quản lý hiển thị các section
       const sections = {
         'profile': document.getElementById('section-profile'),
         'google-ads': document.getElementById('section-google-ads'),
@@ -1811,15 +1914,66 @@
       } else {
         Object.keys(sections).forEach(key => {
           if (sections[key]) {
-            if (key === category) {
-              sections[key].style.display = 'block';
-              sections[key].scrollIntoView({ behavior: 'smooth', block: 'start' });
-            } else {
-              sections[key].style.display = 'none';
-            }
+            sections[key].style.display = (key === category) ? 'block' : 'none';
           }
         });
       }
+
+      // 5. Cuộn mượt đến nội dung cần xem (trừ khoảng cách 125px của 2 thanh sticky header)
+      setTimeout(() => {
+        let scrollTarget = null;
+        if (targetElementId) {
+          scrollTarget = document.getElementById(targetElementId);
+        } else if (category !== 'all') {
+          scrollTarget = sections[category];
+        }
+
+        if (scrollTarget) {
+          const headerOffset = 125;
+          const elementPosition = scrollTarget.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 50);
+    }
+
+    // Tự động nhận diện URL Hash khi khách mở link
+    function parseHashAndActivate() {
+      const hash = (window.location.hash || '').replace('#', '').trim().toLowerCase();
+      if (!hash) {
+        filterCategory('all', null, false, null);
+        return;
+      }
+
+      if (HASH_ROUTES[hash]) {
+        const route = HASH_ROUTES[hash];
+        filterCategory(route.cat, null, false, route.target);
+      } else {
+        const directEl = document.getElementById(hash) || document.getElementById('case-' + hash) || document.getElementById('section-' + hash);
+        if (directEl) {
+          const parentSec = directEl.closest('section');
+          let cat = 'all';
+          if (parentSec) {
+            if (parentSec.id === 'section-google-ads') cat = 'google-ads';
+            else if (parentSec.id === 'section-seo') cat = 'seo';
+            else if (parentSec.id === 'section-feedback') cat = 'feedback';
+            else if (parentSec.id === 'section-matrix') cat = 'matrix';
+            else if (parentSec.id === 'section-profile') cat = 'profile';
+          }
+          filterCategory(cat, null, false, directEl.id);
+        } else {
+          filterCategory('all', null, false, null);
+        }
+      }
+    }
+
+    window.addEventListener('DOMContentLoaded', parseHashAndActivate);
+    window.addEventListener('hashchange', parseHashAndActivate);
+    if (document.readyState === 'complete' || document.readyState === 'interactive') {
+      setTimeout(parseHashAndActivate, 10);
     }
 
     // 3. Fullscreen Presentation Mode
