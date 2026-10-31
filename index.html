@@ -245,9 +245,7 @@
         <button data-category="feedback" onclick="filterCategory('feedback', this)" class="filter-btn">
           💬 Phản Hồi Khách Hàng (5)
         </button>
-        <button data-category="matrix" onclick="filterCategory('matrix', this)" class="filter-btn">
-          📊 Bảng Ma Trận Số Liệu
-        </button>
+
       </div>
     </nav>
 
@@ -1546,207 +1544,7 @@
 
     <!-- ========================================================================= -->
     <!-- PHẦN IV: BẢNG MA TRẬN CHỈ SỐ ĐO LƯỜNG TỔNG HỢP (EXECUTIVE METRICS MATRIX) -->
-    <!-- ========================================================================= -->
-    <section id="section-matrix" class="category-block space-y-6 pt-4">
-      
-      <div class="flex items-start sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
-        <div class="flex items-start gap-2.5">
-          <div class="size-8 rounded-lg bg-slate-100 text-slate-700 flex items-center justify-center border border-slate-300 shrink-0 mt-0.5">
-            <svg class="size-4.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M12 3v18"/><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
-          </div>
-          <div>
-            <h3 class="text-base sm:text-lg font-bold text-slate-900 leading-snug">IV. BẢNG TỔNG HỢP CHỈ SỐ ĐO LƯỜNG HIỆU SUẤT THEO DỰ ÁN</h3>
-            <p class="text-xs text-slate-500 font-normal mt-0.5">Đối chiếu minh bạch giữa ngân sách, lượt chuyển đổi, chi phí CPA và tăng trưởng doanh thu.</p>
-          </div>
-        </div>
-        <span class="bg-slate-100 text-slate-700 text-[11px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap shrink-0">SỐ LIỆU ĐỐI SOÁT</span>
-      </div>
-
-      <!-- Bảng 1: Bảng tổng hợp Google Ads -->
-      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
-        <div class="px-5 py-3.5 bg-slate-900 text-white flex items-center justify-between">
-          <span class="text-xs sm:text-sm font-bold flex items-center gap-2">
-            <span class="size-2 rounded-full bg-emerald-400"></span>
-            BẢNG 1: HIỆU SUẤT CHIẾN DỊCH GOOGLE ADS & TỐI ƯU CHUYỂN ĐỔI (PAID ADS & CRO)
-          </span>
-          <span class="text-[11px] text-emerald-300 font-mono-num font-semibold">CẬP NHẬT THỰC CHIẾN</span>
-        </div>
-        
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse text-xs">
-            <thead>
-              <tr class="bg-slate-100/80 text-slate-700 border-b border-slate-200 font-bold">
-                <th class="p-3 text-center w-12">STT</th>
-                <th class="p-3 min-w-[160px]">Dự Án & Khách Hàng</th>
-                <th class="p-3 min-w-[150px]">Lĩnh Vực / Mô Hình</th>
-                <th class="p-3 text-center min-w-[130px]">Ngân Sách Ads</th>
-                <th class="p-3 text-center min-w-[130px]">Khách Đặt Hẹn / Đơn</th>
-                <th class="p-3 text-center min-w-[130px]">Chi Phí / 1 Khách (CPA)</th>
-                <th class="p-3 text-center min-w-[110px]">Tỷ Lệ Đặt Hẹn (CVR)</th>
-                <th class="p-3 text-center min-w-[140px]">Doanh Thu Mang Về</th>
-                <th class="p-3 text-center min-w-[100px]">% Chi Phí Ads/DT</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100 text-slate-600">
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">01</td>
-                <td class="p-3 font-bold text-slate-900">SuNam Spa (Đà Nẵng & Hội An)</td>
-                <td class="p-3">Massage & Trị liệu cao cấp</td>
-                <td class="p-3 text-center font-mono-num">11.800.000 đ</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num">602 Chuyển Đổi</td>
-                <td class="p-3 text-center font-bold text-emerald-600 font-mono-num bg-emerald-50/50">19.600 đ</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num">35,79%</td>
-                <td class="p-3 text-center font-bold text-slate-900">Kín bàn trị liệu</td>
-                <td class="p-3 text-center font-mono-num text-emerald-600 font-bold">~5%</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">02</td>
-                <td class="p-3 font-bold text-slate-900">HaFood B2B (Trung Thu)</td>
-                <td class="p-3">Quà tặng sỉ doanh nghiệp</td>
-                <td class="p-3 text-center font-mono-num">15.200.000 đ</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num">78 Doanh Nghiệp</td>
-                <td class="p-3 text-center font-bold text-slate-700 font-mono-num">194.800 đ</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num">18,5%</td>
-                <td class="p-3 text-center font-bold text-slate-900 font-mono-num">350+ Triệu</td>
-                <td class="p-3 text-center font-mono-num text-emerald-600 font-bold">4,3%</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">03</td>
-                <td class="p-3 font-bold text-slate-900">Phúc Lee Photography</td>
-                <td class="p-3">Nhiếp ảnh du lịch Đà Nẵng - Hội An</td>
-                <td class="p-3 text-center font-mono-num">10.003.838 đ</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num">108 Chuyển Đổi</td>
-                <td class="p-3 text-center font-bold text-emerald-600 font-mono-num bg-emerald-50/50">98.076 đ</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num">11,97%</td>
-                <td class="p-3 text-center font-bold text-slate-900 font-mono-num">180 Triệu (Khách x3)</td>
-                <td class="p-3 text-center font-mono-num text-emerald-600 font-bold">5,5%</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">04</td>
-                <td class="p-3 font-bold text-slate-900">FEC Explorer (Du Học & Trại Hè)<br><span class="text-[11px] font-normal text-slate-400 font-mono-num">fecexplorer.edu.vn</span></td>
-                <td class="p-3">Giáo dục quốc tế & Trại hè High-Ticket</td>
-                <td class="p-3 text-center font-mono-num">16.820.000 đ</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num">180 Phụ Huynh</td>
-                <td class="p-3 text-center font-bold text-emerald-600 font-mono-num bg-emerald-50/50">93.445 đ</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num">12,95%</td>
-                <td class="p-3 text-center font-bold text-slate-900">Kín các đoàn bay sớm</td>
-                <td class="p-3 text-center font-mono-num text-emerald-600 font-bold">&lt; 2%</td>
-              </tr>
-
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">07</td>
-                <td class="p-3 font-bold text-slate-900">Eyelash Đà Nẵng</td>
-                <td class="p-3">Nối mi khách quốc tế</td>
-                <td class="p-3 text-center font-mono-num">6.800.000 đ</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num">128 Khách Tây</td>
-                <td class="p-3 text-center font-bold text-emerald-600 font-mono-num bg-emerald-50/50">53.100 đ</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num">28,4%</td>
-                <td class="p-3 text-center font-bold text-slate-900 font-mono-num">68 Triệu</td>
-                <td class="p-3 text-center font-mono-num text-emerald-600 font-bold">10%</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">05</td>
-                <td class="p-3 font-bold text-slate-900">Cho Thuê Xe Đà Nẵng</td>
-                <td class="p-3">Xe máy & Ô tô tự lái</td>
-                <td class="p-3 text-center font-mono-num">7.200.000 đ</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num">340 Khách Gọi</td>
-                <td class="p-3 text-center font-bold text-emerald-600 font-mono-num bg-emerald-50/50">21.000 đ</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num">26,8%</td>
-                <td class="p-3 text-center font-bold text-slate-900 font-mono-num">95 Triệu</td>
-                <td class="p-3 text-center font-mono-num text-emerald-600 font-bold">7,5%</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">06</td>
-                <td class="p-3 font-bold text-slate-900">Orange Prints (Thị trường Mỹ)</td>
-                <td class="p-3">eCommerce Quốc tế (POD)</td>
-                <td class="p-3 text-center font-mono-num">25.380 USD</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num">1.110 Đơn Hàng</td>
-                <td class="p-3 text-center font-bold text-slate-700 font-mono-num">22,8 USD</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num">ROAS 2.40</td>
-                <td class="p-3 text-center font-bold text-slate-900 font-mono-num">1,5 TỶ VNĐ</td>
-                <td class="p-3 text-center font-mono-num text-emerald-600 font-bold">Lãi 380Tr</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Bảng 2: Bảng tổng hợp SEO Search Console -->
-      <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs">
-        <div class="px-5 py-3.5 bg-[#1B365D] text-white flex items-center justify-between">
-          <span class="text-xs sm:text-sm font-bold flex items-center gap-2">
-            <span class="size-2 rounded-full bg-blue-400"></span>
-            BẢNG 2: TĂNG TRƯỞNG SEO TỔNG THỂ & TRAFFIC TỰ NHIÊN (GOOGLE SEARCH CONSOLE)
-          </span>
-          <span class="text-[11px] text-blue-200 font-mono-num font-semibold">ORGANIC TRAFFIC</span>
-        </div>
-        
-        <div class="overflow-x-auto">
-          <table class="w-full text-left border-collapse text-xs">
-            <thead>
-              <tr class="bg-slate-100/80 text-slate-700 border-b border-slate-200 font-bold">
-                <th class="p-3 text-center w-12">STT</th>
-                <th class="p-3 min-w-[160px]">Dự Án & Website</th>
-                <th class="p-3 min-w-[150px]">Lĩnh Vực / Mô Hình</th>
-                <th class="p-3 text-center min-w-[130px]">Thời Gian Đo Lường</th>
-                <th class="p-3 text-center min-w-[130px]">Lượt Click Thực Tế</th>
-                <th class="p-3 text-center min-w-[130px]">Lượt Hiển Thị</th>
-                <th class="p-3 text-center min-w-[100px]">Tỷ Lệ Click (CTR)</th>
-                <th class="p-3 text-center min-w-[100px]">Vị Trí Trung Bình</th>
-                <th class="p-3 min-w-[200px]">Tốc Độ Tăng Trưởng & Đột Phá</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100 text-slate-600">
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">01</td>
-                <td class="p-3 font-bold text-slate-900">Hủ Tiếu Hồng Phát<br><span class="text-[11px] font-normal text-slate-400 font-mono-num">hutieuhongphat.com</span></td>
-                <td class="p-3">Chuỗi F&B Ẩm thực truyền thống</td>
-                <td class="p-3 text-center">Trước vs Sau tối ưu (3-6 tháng)</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num bg-emerald-50/50">6.120 Clicks<br><span class="text-[10px] text-slate-400 font-normal">Lũy kế 10.400</span></td>
-                <td class="p-3 text-center font-bold text-slate-700 font-mono-num">105.000 Lượt</td>
-                <td class="p-3 text-center font-bold text-purple-700 font-mono-num">5,8%</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num bg-blue-50/50">Top 7,8</td>
-                <td class="p-3 text-slate-900 font-medium"><strong class="text-emerald-700">Tăng trưởng gấp 127 LẦN</strong> (từ 48 clicks lên 6.120 clicks, đỉnh 120 clicks/ngày). Khách du lịch đến quán nườm nượp.</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">02</td>
-                <td class="p-3 font-bold text-slate-900">Alphatic<br><span class="text-[11px] font-normal text-slate-400 font-mono-num">alphatic.com</span></td>
-                <td class="p-3">Giải pháp B2B & Công nghệ</td>
-                <td class="p-3 text-center">28 ngày chuẩn Search Console</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num bg-emerald-50/50">813 Clicks</td>
-                <td class="p-3 text-center font-bold text-slate-700 font-mono-num">9.750 Lượt</td>
-                <td class="p-3 text-center font-bold text-purple-700 font-mono-num bg-purple-50/50">8,3% (Kỷ lục)</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num bg-blue-50/50">Top 8,3</td>
-                <td class="p-3 text-slate-900 font-medium">Toàn bộ cụm từ khóa thương hiệu & dịch vụ chủ lực vào Top Trang 1 Google; tỷ lệ CTR vượt xa chuẩn ngành.</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">03</td>
-                <td class="p-3 font-bold text-slate-900">Eyelash Đà Nẵng<br><span class="text-[11px] font-normal text-slate-400 font-mono-num">eyelashdanang.com</span></td>
-                <td class="p-3">Nối mi & Làm đẹp du khách quốc tế</td>
-                <td class="p-3 text-center">Gần 3 tháng Search Console</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num bg-emerald-50/50">258 Clicks</td>
-                <td class="p-3 text-center font-bold text-slate-700 font-mono-num">7.620 Lượt</td>
-                <td class="p-3 text-center font-bold text-purple-700 font-mono-num bg-purple-50/50">3,4%</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num bg-blue-50/50">Top 4,4</td>
-                <td class="p-3 text-slate-900 font-medium">Chiếm lĩnh Top 4,4 các cụm từ khóa tiếng Anh về nối mi & uốn mi tại Đà Nẵng; hút đều đặn tệp khách du lịch nước ngoài không tốn tiền ads.</td>
-              </tr>
-              <tr class="hover:bg-slate-50/70 transition-colors">
-                <td class="p-3 text-center font-bold text-slate-400">04</td>
-                <td class="p-3 font-bold text-slate-900">SuNam Spa<br><span class="text-[11px] font-normal text-slate-400 font-mono-num">sunamspa.com</span></td>
-                <td class="p-3">Trị liệu & Spa Du lịch</td>
-                <td class="p-3 text-center">Local Search Console</td>
-                <td class="p-3 text-center font-bold text-emerald-700 font-mono-num bg-emerald-50/50">440 Clicks</td>
-                <td class="p-3 text-center font-bold text-slate-700 font-mono-num">23.900 Lượt</td>
-                <td class="p-3 text-center font-mono-num">1,8%</td>
-                <td class="p-3 text-center font-bold text-blue-700 font-mono-num bg-blue-50/50">Top 6,8</td>
-                <td class="p-3 text-slate-900 font-medium">Chiếm lĩnh Top 1-7 các cụm từ khóa Local Spa, Massage Hội An & Đà Nẵng; hút khách du lịch tìm kiếm tại chỗ.</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-    </section>
+    
 
     <!-- FOOTER CHUẨN EASY AI -->
     <footer class="pt-8 pb-12 border-t border-slate-200 text-center text-xs text-slate-500 space-y-2 no-print">
@@ -1837,9 +1635,6 @@
       'seo': { cat: 'seo', target: 'section-seo' },
       'feedback': { cat: 'feedback', target: 'section-feedback' },
       'phan-hoi': { cat: 'feedback', target: 'section-feedback' },
-      'matrix': { cat: 'matrix', target: 'section-matrix' },
-      'bang-so-lieu': { cat: 'matrix', target: 'section-matrix' },
-      'so-lieu': { cat: 'matrix', target: 'section-matrix' },
       // Case Studies cụ thể
       'fec': { cat: 'google-ads', target: 'case-fec-explorer' },
       'fec-explorer': { cat: 'google-ads', target: 'case-fec-explorer' },
@@ -1903,8 +1698,7 @@
         'profile': document.getElementById('section-profile'),
         'google-ads': document.getElementById('section-google-ads'),
         'seo': document.getElementById('section-seo'),
-        'feedback': document.getElementById('section-feedback'),
-        'matrix': document.getElementById('section-matrix')
+        'feedback': document.getElementById('section-feedback')
       };
 
       if (category === 'all') {
@@ -1960,7 +1754,6 @@
             if (parentSec.id === 'section-google-ads') cat = 'google-ads';
             else if (parentSec.id === 'section-seo') cat = 'seo';
             else if (parentSec.id === 'section-feedback') cat = 'feedback';
-            else if (parentSec.id === 'section-matrix') cat = 'matrix';
             else if (parentSec.id === 'section-profile') cat = 'profile';
           }
           filterCategory(cat, null, false, directEl.id);
