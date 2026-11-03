@@ -580,10 +580,10 @@
     <!-- ========================================================================= -->
     <!-- PHẦN MỚI 1: THƯ VIỆN WEBSITE DOANH NGHIỆP & B2B (12 DỰ ÁN) -->
     <!-- ========================================================================= -->
-    <section id="section-websites" class="category-block space-y-6 pt-4">
+    <section id="section-websites" class="category-block space-y-4 pt-4">
       
       <!-- Section Header -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
         <div class="flex items-start gap-2.5">
           <svg class="size-6 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg>
           <div>
@@ -1073,7 +1073,7 @@
     
 
         <!-- Card darainen: Đá Tự Nhiên & Trang Trí Rainen -->
-        <article class="website-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="construction" data-type="website">
+        <article class="website-card extra-web-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="construction" data-type="website">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -1146,7 +1146,7 @@
     
 
         <!-- Card baobiphuquan: Bao Bì Phú Quân — Giải Pháp Đóng Gói Toàn Diện -->
-        <article class="website-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="b2b" data-type="website">
+        <article class="website-card extra-web-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="b2b" data-type="website">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -1219,7 +1219,7 @@
     
 
         <!-- Card thepalmix: Thương Hiệu Thời Trang Quốc Tế The Palmix -->
-        <article class="website-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="retail" data-type="website">
+        <article class="website-card extra-web-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="retail" data-type="website">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -1292,7 +1292,7 @@
     
 
         <!-- Card brando: Brando — Dịch Vụ Marketing & Quảng Cáo Toàn Diện -->
-        <article class="website-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="agency" data-type="website">
+        <article class="website-card extra-web-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="agency" data-type="website">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -1365,7 +1365,7 @@
     
 
         <!-- Card nongnghiepxanhhn: Nông Nghiệp Xanh Hà Nội — Thuốc Thú Y & Gia Cầm -->
-        <article class="website-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="agriculture" data-type="website">
+        <article class="website-card extra-web-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="agriculture" data-type="website">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -1438,7 +1438,7 @@
     
 
         <!-- Card hoangduongland: Bất Động Sản Hoàng Dương Land -->
-        <article class="website-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="construction" data-type="website">
+        <article class="website-card extra-web-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="construction" data-type="website">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -1509,6 +1509,14 @@
           </div>
         </article>
     
+      
+        <!-- CTA Xem Thêm chuyển sang Tab Website -->
+        <div class="web-see-more-box flex justify-center pt-3 pb-2">
+          <button type="button" onclick="filterCategory('websites', null, true, 'section-websites')" class="group inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 transition-all shadow-xs hover:shadow-sm hover:scale-[1.01] active:scale-[0.99] cursor-pointer" title="Chuyển sang tab Website để xem toàn bộ 12 dự án">
+            <span>Xem Thêm 6 Website Doanh Nghiệp Khác</span>
+            <svg class="size-4 text-emerald-700 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
     </section>
     
@@ -1517,10 +1525,10 @@
     <!-- ========================================================================= -->
     <!-- PHẦN MỚI 2: THƯ VIỆN LANDING PAGE CHUYỂN ĐỔI CAO (28 DỰ ÁN) -->
     <!-- ========================================================================= -->
-    <section id="section-landing-pages" class="category-block space-y-6 pt-4">
+    <section id="section-landing-pages" class="category-block space-y-4 pt-4">
       
       <!-- Section Header -->
-      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
         <div class="flex items-start gap-2.5">
           <svg class="size-6 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8m8 4H8m8 4H8"/></svg>
           <div>
@@ -2017,7 +2025,7 @@
     
 
         <!-- Card khoahocomsoha: Khóa Học SOHA — Giàu Có Trên Nền Tảng Trí Tuệ -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2090,7 +2098,7 @@
     
 
         <!-- Card tiktok-ads-phan-nho: Thực Chiến Quảng Cáo TikTok Ads — Phan Nho -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2163,7 +2171,7 @@
     
 
         <!-- Card demo-khoa-hoc-yoga: Khóa Học Yoga Cơ Bản: Nền Tảng Cho Sức Khỏe -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="health" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="health" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2236,7 +2244,7 @@
     
 
         <!-- Card demo-tai-chinh: Bí Quyết Thành Công Trong Đầu Tư Tài Chính -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2309,7 +2317,7 @@
     
 
         <!-- Card x2-doanh-so-nha-thuoc: Chiến Lược X2 Doanh Số & Tự Động Hóa Nhà Thuốc -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2382,7 +2390,7 @@
     
 
         <!-- Card khoahocai: Thiết Kế Video AI Đột Phá — Tự Động Hóa Kênh -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2455,7 +2463,7 @@
     
 
         <!-- Card demo-fitness-james: Performance Fitness Coaching — James PT -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="health" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="health" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2528,7 +2536,7 @@
     
 
         <!-- Card tieu-dung-xanh: Kinh Doanh Triệu Đô Với Mô Hình Tiêu Dùng Xanh -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2601,7 +2609,7 @@
     
 
         <!-- Card so-phong-thuy: Giải Mã Năng Lượng Số: Sim — Biển Số — CCCD | Gia Trang -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="health" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="health" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2674,7 +2682,7 @@
     
 
         <!-- Card ai-duong-thanh-son: Ứng Dụng AI X10 Hiệu Suất Doanh Nghiệp — Dương Thành Sơn -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2747,7 +2755,7 @@
     
 
         <!-- Card kinh-doanh-1000x: Xây Dựng Hệ Thống Kinh Doanh Triệu Đô 1000X -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2820,7 +2828,7 @@
     
 
         <!-- Card nguyen-huu-son: Bí Mật Bản Đồ Tài Chính Thịnh Vượng — Nguyễn Hữu Sơn -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2893,7 +2901,7 @@
     
 
         <!-- Card dieu-quan-trong-nhat: Khóa Học Điều Quan Trọng Nhất — Thế Kudo -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -2966,7 +2974,7 @@
     
 
         <!-- Card kien-truc-su-cap-2: Ôn Thi Kiến Trúc Sư Cấp 2 Tại Nhật — Seiyo -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="education" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="education" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3039,7 +3047,7 @@
     
 
         <!-- Card trang-chu-kstudy-lp: Học Viện Digital Marketing KStudy — Bứt Phá Sự Nghiệp -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="education" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="education" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3112,7 +3120,7 @@
     
 
         <!-- Card ban-hang-dot-pha: 8 Bước Chốt Sale Đột Phá M.M.T — Ưu Đãi 97K -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3185,7 +3193,7 @@
     
 
         <!-- Card nghe-thuat-xu-ly-tu-choi: Nghệ Thuật Xử Lý Từ Chối: Kịch Bản Chốt Sale 497K -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3258,7 +3266,7 @@
     
 
         <!-- Card master-kinh-doanh: Master Kinh Doanh: Làm Chủ 5 Chỉ Số Vàng X3 Lợi Nhuận -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="business" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3331,7 +3339,7 @@
     
 
         <!-- Card phan-than-so: Xây Kênh YouTube Chuyển Đổi Bằng Phân Thân Số -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="ai_media" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3404,7 +3412,7 @@
     
 
         <!-- Card chay-no-nang-cao: Quản Trị Dòng Tiền & Chạy Nợ Nâng Cao — Tự Tin Làm Chủ -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3477,7 +3485,7 @@
     
 
         <!-- Card van-anh-bds: Vân Anh: Cố Vấn Tích Sản & Quản Trị Dòng Tiền Bất Động Sản -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="finance" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3550,7 +3558,7 @@
     
 
         <!-- Card gialoi-profile: Gia Loi Joint Stock Company — International Business Profile -->
-        <article class="landing-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="digital_product" data-type="landing">
+        <article class="landing-card extra-lp-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-xs hover:shadow-md transition-all flex flex-col justify-between" data-industry="digital_product" data-type="landing">
           <div>
             <!-- Browser Bar -->
             <div class="browser-bar">
@@ -3621,6 +3629,14 @@
           </div>
         </article>
     
+      
+        <!-- CTA Xem Thêm chuyển sang Tab Landing Page -->
+        <div class="lp-see-more-box flex justify-center pt-3 pb-2">
+          <button type="button" onclick="filterCategory('landing-pages', null, true, 'section-landing-pages')" class="group inline-flex items-center gap-2.5 px-6 py-3 rounded-xl text-xs sm:text-sm font-bold text-blue-800 bg-blue-50 hover:bg-blue-100 border border-blue-200 transition-all shadow-xs hover:shadow-sm hover:scale-[1.01] active:scale-[0.99] cursor-pointer" title="Chuyển sang tab Landing Page để xem toàn bộ 28 dự án">
+            <span>Xem Thêm 22 Landing Page Khác</span>
+            <svg class="size-4 text-blue-700 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+          </button>
+        </div>
       </div>
     </section>
     
@@ -3628,9 +3644,9 @@
     <!-- ========================================================================= -->
     <!-- PHẦN I: CASE STUDIES GOOGLE ADS (PAID ADS & CRO) -->
     <!-- ========================================================================= -->
-    <section id="section-google-ads" class="category-block space-y-6">
+    <section id="section-google-ads" class="category-block space-y-4">
       
-      <div class="flex items-start sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
         <div class="flex items-start gap-2.5">
           <svg class="size-6 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           <div>
@@ -4120,9 +4136,9 @@
     <!-- ========================================================================= -->
     <!-- PHẦN II: CASE STUDIES SEO TỔNG THỂ & TRAFFIC SEARCH CONSOLE -->
     <!-- ========================================================================= -->
-    <section id="section-seo" class="category-block space-y-6 pt-4">
+    <section id="section-seo" class="category-block space-y-4 pt-4">
       
-      <div class="flex items-start sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
         <div class="flex items-start gap-2.5">
           <svg class="size-6 text-blue-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
           <div>
@@ -4510,9 +4526,9 @@
     <!-- ========================================================================= -->
     <!-- PHẦN III: BẢO CHỨNG NIỀM TIN - NHẬT KÝ TIN NHẮN "WOW" TỪ KHÁCH HÀNG -->
     <!-- ========================================================================= -->
-    <section id="section-feedback" class="category-block space-y-6 pt-4">
+    <section id="section-feedback" class="category-block space-y-4 pt-4">
       
-      <div class="flex items-start sm:items-center justify-between gap-3 border-b border-slate-200 pb-3">
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-3">
         <div class="flex items-start gap-2.5">
           <svg class="size-6 text-amber-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
           <div>
@@ -5010,6 +5026,7 @@
       'sunam-seo': { cat: 'seo', target: 'case-sunam-seo' }
     };
 
+    let currentCategory = 'all';
     function filterCategory(category, btn, updateHash = true, targetElementId = null) {
       const allBtns = document.querySelectorAll('.filter-btn');
       
@@ -5052,16 +5069,45 @@
         'feedback': document.getElementById('section-feedback')
       };
 
+      // Biến theo dõi danh mục hiện tại
+      currentCategory = category;
+
       if (category === 'all') {
         Object.values(sections).forEach(sec => {
           if (sec) sec.style.display = 'block';
         });
+
+        // Chế độ 'Tất Cả': Giới hạn hiển thị 6 dự án đầu tiên + hiện nút Xem Thêm
+        document.querySelectorAll('.website-card').forEach((card, idx) => {
+          card.style.display = (idx < 6) ? 'flex' : 'none';
+        });
+        const webSeeMore = document.querySelector('.web-see-more-box');
+        if (webSeeMore) webSeeMore.style.display = 'flex';
+
+        document.querySelectorAll('.landing-card').forEach((card, idx) => {
+          card.style.display = (idx < 6) ? 'flex' : 'none';
+        });
+        const lpSeeMore = document.querySelector('.lp-see-more-box');
+        if (lpSeeMore) lpSeeMore.style.display = 'flex';
+
       } else {
         Object.keys(sections).forEach(key => {
           if (sections[key]) {
             sections[key].style.display = (key === category) ? 'block' : 'none';
           }
         });
+
+        // Khi vào tab riêng biệt: Hiển thị 100% toàn bộ dự án và ẩn nút Xem Thêm
+        if (category === 'websites') {
+          document.querySelectorAll('.website-card').forEach(card => card.style.display = 'flex');
+          const webSeeMore = document.querySelector('.web-see-more-box');
+          if (webSeeMore) webSeeMore.style.display = 'none';
+        }
+        if (category === 'landing-pages') {
+          document.querySelectorAll('.landing-card').forEach(card => card.style.display = 'flex');
+          const lpSeeMore = document.querySelector('.lp-see-more-box');
+          if (lpSeeMore) lpSeeMore.style.display = 'none';
+        }
       }
 
       // 5. Cuộn mượt đến nội dung cần xem (trừ khoảng cách 125px của 2 thanh sticky header)
@@ -5218,6 +5264,7 @@
     }
   
     function filterWebsites(industry, btn) {
+      if (currentCategory === "all") { filterCategory("websites", null, false); }
       document.querySelectorAll('.web-filter-btn').forEach(b => {
         b.classList.remove('active', 'bg-emerald-700', 'text-white', 'border-emerald-700');
         b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
@@ -5236,6 +5283,7 @@
     }
 
     function filterLandings(industry, btn) {
+      if (currentCategory === "all") { filterCategory("landing-pages", null, false); }
       document.querySelectorAll('.lp-filter-btn').forEach(b => {
         b.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
         b.classList.add('bg-white', 'text-slate-700', 'border-slate-200');
