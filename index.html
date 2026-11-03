@@ -4186,9 +4186,11 @@
       if (!currentGallery.length) return;
       const item = currentGallery[currentGalleryIndex];
       modalImg.src = item.src;
-      modalCaption.textContent = item.caption || 'Chi tiết bằng chứng thực tế';
 
-      if (currentGallery.length > 1) {
+      if (currentGallery.length > 1 || activeSliderContext) {
+        // Bỏ cụm thông tin text caption khi phóng to slider ảnh
+        modalCaption.textContent = '';
+        modalCaption.classList.add('hidden');
         modalCounter.textContent = `${currentGalleryIndex + 1} / ${currentGallery.length}`;
         modalCounter.classList.remove('hidden');
         modalPrevBtn.classList.remove('hidden');
@@ -4197,6 +4199,12 @@
         modalCounter.classList.add('hidden');
         modalPrevBtn.classList.add('hidden');
         modalNextBtn.classList.add('hidden');
+        modalCaption.textContent = item.caption || '';
+        if (item.caption) {
+          modalCaption.classList.remove('hidden');
+        } else {
+          modalCaption.classList.add('hidden');
+        }
       }
 
       // Đồng bộ trạng thái slider bên ngoài trang nếu có
