@@ -182,7 +182,30 @@
         break-inside: avoid !important;
       }
     }
-  </style>
+  
+
+    /* ========================================================================= */
+    /* KHU VỰC ĐIỀU CHỈNH LINE-HEIGHT (DÀNH CHO DEVTOOLS F12 TEST REALTIME)      */
+    /* Nhấp vào :root trên DevTools để tăng/giảm số và xem kết quả trực tiếp     */
+    /* ========================================================================= */
+    :root {
+      --lh-hero-title: 1.25;     /* Tiêu đề chính lớn H1 (mặc định: 1.25) */
+      --lh-section-title: 1.35;  /* Tiêu đề mục Section H2, H3 (mặc định: 1.35) */
+      --lh-card-title: 1.38;     /* Tiêu đề thẻ Card H4 dự án (mặc định: 1.38) */
+      --lh-body-text: 1.625;     /* Đoạn văn mô tả, văn bản thường P (mặc định: 1.625) */
+      --lh-card-desc: 1.45;      /* Nội dung Bài toán / Giải pháp trong thẻ Card (mặc định: 1.45) */
+      --lh-badge-btn: 1.2;       /* Nút bấm, Tag lọc, Badge (mặc định: 1.2) */
+    }
+
+    /* Gắn biến CSS trực tiếp để khi đổi trên :root sẽ ăn ngay lập tức */
+    h1 { line-height: var(--lh-hero-title) !important; }
+    h2, h3 { line-height: var(--lh-section-title) !important; }
+    .website-card h4, .landing-card h4, article h4 { line-height: var(--lh-card-title) !important; }
+    p { line-height: var(--lh-body-text); }
+    .website-card p, .landing-card p, article ul li span { line-height: var(--lh-card-desc) !important; }
+    .filter-btn, .web-filter-btn, .lp-filter-btn { line-height: var(--lh-badge-btn) !important; }
+
+</style>
 </head>
 <body class="selection:bg-emerald-100 selection:text-emerald-900 min-h-screen flex flex-col">
 
