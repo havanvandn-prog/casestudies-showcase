@@ -4063,40 +4063,181 @@
 <!-- ========================================================================= -->
 <!-- LIGHTBOX MODAL TOÀN MÀN HÌNH (CLICK TO ZOOM SẮC NÉT) -->
 <!-- ========================================================================= -->
-<div class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center p-4 sm:p-6 no-print" id="lightboxModal" onclick="closeLightbox(event)">
-<!-- Top Action Bar in Lightbox -->
-<div class="w-full max-w-5xl flex items-center justify-between pb-3 text-white shrink-0">
-<div class="text-xs sm:text-sm font-bold text-slate-200 truncate pr-4" id="lightboxCaption">
+<div class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 flex flex-col items-center justify-center p-3 sm:p-6 no-print select-none" id="lightboxModal" onclick="closeLightbox(event)">
+  <!-- Top Action Bar in Lightbox -->
+  <div class="w-full max-w-5xl flex items-center justify-between pb-3 text-white shrink-0 gap-3" onclick="event.stopPropagation()">
+    <div class="flex items-center gap-2 min-w-0 pr-2">
+      <span id="lightboxCounter" class="hidden text-xs font-mono font-bold bg-white/15 text-emerald-300 px-2.5 py-1 rounded-full border border-white/10 shrink-0">1 / 3</span>
+      <div class="text-xs sm:text-sm font-bold text-slate-200 truncate" id="lightboxCaption">
         Xem chi tiết hình ảnh
       </div>
-<button class="size-10 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-all shrink-0 cursor-pointer" onclick="hideLightbox()" title="Đóng (phím ESC)">
-<svg class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"></path></svg>
-</button>
-</div>
-<!-- Image Container -->
-<div class="relative w-full max-w-5xl flex-1 flex items-center justify-center min-h-0 overflow-hidden" onclick="event.stopPropagation()">
-<img alt="Zoom Image" class="max-w-full max-h-[85vh] object-contain rounded-lg shadow-2xl transition-transform duration-200" id="lightboxImg" src=""/>
-</div>
-<!-- Bottom Hint -->
-<div class="text-[11px] text-slate-400 pt-3 shrink-0">
-      Nhấn phím <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white font-mono text-[10px]">ESC</kbd> hoặc nhấp ra ngoài để đóng
     </div>
+    <button class="size-10 rounded-full bg-white/10 hover:bg-white/25 text-white flex items-center justify-center transition-all shrink-0 cursor-pointer border border-white/10" onclick="hideLightbox()" title="Đóng (phím ESC)">
+      <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <!-- Image Container with Left / Right Navigation Buttons -->
+  <div class="relative w-full max-w-5xl flex-1 flex items-center justify-center min-h-0 overflow-hidden group/lb" onclick="event.stopPropagation()">
+    <!-- Prev Arrow Button -->
+    <button id="lightboxPrevBtn" type="button" onclick="lightboxPrev(event)" class="hidden absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 size-11 sm:size-13 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center transition-all shadow-2xl z-30 cursor-pointer backdrop-blur-md border border-white/20 hover:scale-110 active:scale-95" title="Ảnh trước (phím mũi tên trái ‹)">
+      <svg class="size-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+
+    <!-- Main Zoom Image -->
+    <img alt="Zoom Image" class="max-w-full max-h-[82vh] object-contain rounded-xl shadow-2xl transition-transform duration-200" id="lightboxImg" src=""/>
+
+    <!-- Next Arrow Button -->
+    <button id="lightboxNextBtn" type="button" onclick="lightboxNext(event)" class="hidden absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 size-11 sm:size-13 rounded-full bg-slate-900/80 hover:bg-slate-900 text-white flex items-center justify-center transition-all shadow-2xl z-30 cursor-pointer backdrop-blur-md border border-white/20 hover:scale-110 active:scale-95" title="Ảnh tiếp theo (phím mũi tên phải ›)">
+      <svg class="size-6 text-white" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- Bottom Hint -->
+  <div class="text-[11px] text-slate-400 pt-3 shrink-0 flex items-center gap-2 text-center" onclick="event.stopPropagation()">
+    <span>Dùng phím <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white font-mono text-[10px]">‹</kbd> <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white font-mono text-[10px]">›</kbd> chuyển ảnh • <kbd class="px-1.5 py-0.5 rounded bg-white/10 text-white font-mono text-[10px]">ESC</kbd> hoặc nhấp ngoài để đóng</span>
+  </div>
 </div>
 <!-- JAVASCRIPT ĐIỀU KHIỂN LIGHTBOX, FILTER & FULLSCREEN -->
 <script>
-    // 1. Lightbox Controls
+    // 1. Lightbox Controls with Slider Navigation
     const modal = document.getElementById('lightboxModal');
     const modalImg = document.getElementById('lightboxImg');
     const modalCaption = document.getElementById('lightboxCaption');
+    const modalCounter = document.getElementById('lightboxCounter');
+    const modalPrevBtn = document.getElementById('lightboxPrevBtn');
+    const modalNextBtn = document.getElementById('lightboxNextBtn');
 
-    function openLightbox(src, caption) {
-      modalImg.src = src;
-      modalCaption.textContent = caption || 'Chi tiết bằng chứng thực tế';
+    let currentGallery = [];
+    let currentGalleryIndex = 0;
+    let activeSliderContext = null;
+
+    function openLightbox(src, caption, triggerEl) {
+      if (!triggerEl && window.event) {
+        triggerEl = window.event.target || window.event.currentTarget;
+      }
+      
+      let imgEl = triggerEl;
+      if (imgEl && imgEl.tagName !== 'IMG') {
+        imgEl = imgEl.querySelector('img') || imgEl;
+      }
+      if (!imgEl || imgEl.tagName !== 'IMG') {
+        imgEl = Array.from(document.querySelectorAll('.feedback-slide img, .slide-item img, .zoomable-img')).find(i => i.src === src);
+      }
+
+      currentGallery = [];
+      currentGalleryIndex = 0;
+      activeSliderContext = null;
+
+      if (imgEl) {
+        const sliderA = imgEl.closest('[id^="slider-"]');
+        const sliderB = imgEl.closest('.feedback-slider');
+
+        if (sliderA) {
+          const slides = Array.from(sliderA.querySelectorAll('.feedback-slide'));
+          if (slides.length > 0) {
+            currentGallery = slides.map(s => {
+              const im = s.querySelector('img');
+              return {
+                src: im ? im.src : '',
+                caption: im ? (im.getAttribute('data-caption') || im.alt) : ''
+              };
+            }).filter(item => item.src);
+            currentGalleryIndex = slides.findIndex(s => s.contains(imgEl));
+            if (currentGalleryIndex < 0) currentGalleryIndex = 0;
+            activeSliderContext = { type: 'A', id: sliderA.id };
+          }
+        } else if (sliderB) {
+          const slides = Array.from(sliderB.querySelectorAll('.slide-item'));
+          if (slides.length > 0) {
+            currentGallery = slides.map(s => {
+              const im = s.querySelector('img');
+              return {
+                src: im ? im.src : '',
+                caption: im ? (im.getAttribute('data-caption') || im.alt) : ''
+              };
+            }).filter(item => item.src);
+            currentGalleryIndex = slides.findIndex(s => s.contains(imgEl));
+            if (currentGalleryIndex < 0) currentGalleryIndex = 0;
+            activeSliderContext = { type: 'B', id: sliderB.getAttribute('data-slider-id') };
+          }
+        }
+      }
+
+      if (currentGallery.length <= 1) {
+        currentGallery = [{ src: src || (imgEl ? imgEl.src : ''), caption: caption || (imgEl ? imgEl.alt : 'Xem chi tiết hình ảnh') }];
+        currentGalleryIndex = 0;
+      }
+
+      updateLightboxDisplay();
+
       modal.classList.remove('hidden');
       setTimeout(() => {
         modal.classList.remove('opacity-0');
       }, 10);
       document.body.style.overflow = 'hidden';
+    }
+
+    function openLightboxFromSrc(src, caption) {
+      openLightbox(src, caption || 'Mockup giao diện website');
+    }
+
+    function updateLightboxDisplay() {
+      if (!currentGallery.length) return;
+      const item = currentGallery[currentGalleryIndex];
+      modalImg.src = item.src;
+      modalCaption.textContent = item.caption || 'Chi tiết bằng chứng thực tế';
+
+      if (currentGallery.length > 1) {
+        modalCounter.textContent = `${currentGalleryIndex + 1} / ${currentGallery.length}`;
+        modalCounter.classList.remove('hidden');
+        modalPrevBtn.classList.remove('hidden');
+        modalNextBtn.classList.remove('hidden');
+      } else {
+        modalCounter.classList.add('hidden');
+        modalPrevBtn.classList.add('hidden');
+        modalNextBtn.classList.add('hidden');
+      }
+
+      // Đồng bộ trạng thái slider bên ngoài trang nếu có
+      if (activeSliderContext) {
+        if (activeSliderContext.type === 'A') {
+          const container = document.getElementById(activeSliderContext.id);
+          if (container) {
+            const slides = container.querySelectorAll('.feedback-slide');
+            slides.forEach((s, idx) => {
+              if (idx === currentGalleryIndex) s.classList.remove('hidden');
+              else s.classList.add('hidden');
+            });
+            const curText = container.querySelector('.current-slide');
+            if (curText) curText.textContent = currentGalleryIndex + 1;
+            const capText = container.querySelector('.slider-caption');
+            if (capText) capText.textContent = item.caption;
+          }
+        } else if (activeSliderContext.type === 'B') {
+          const sliderId = activeSliderContext.id;
+          if (typeof sliderStates !== 'undefined' && sliderStates[sliderId]) {
+            sliderStates[sliderId].current = currentGalleryIndex;
+            if (typeof updateSlider === 'function') updateSlider(sliderId);
+          }
+        }
+      }
+    }
+
+    function lightboxNext(e) {
+      if (e) e.stopPropagation();
+      if (currentGallery.length > 1) {
+        currentGalleryIndex = (currentGalleryIndex + 1) % currentGallery.length;
+        updateLightboxDisplay();
+      }
+    }
+
+    function lightboxPrev(e) {
+      if (e) e.stopPropagation();
+      if (currentGallery.length > 1) {
+        currentGalleryIndex = (currentGalleryIndex - 1 + currentGallery.length) % currentGallery.length;
+        updateLightboxDisplay();
+      }
     }
 
     function hideLightbox() {
@@ -4115,10 +4256,25 @@
     }
 
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        hideLightbox();
-      }
+      if (modal.classList.contains('hidden')) return;
+      if (e.key === 'Escape') hideLightbox();
+      if (e.key === 'ArrowRight') lightboxNext();
+      if (e.key === 'ArrowLeft') lightboxPrev();
     });
+
+    let lbTouchStartX = 0;
+    modal.addEventListener('touchstart', (e) => {
+      lbTouchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    modal.addEventListener('touchend', (e) => {
+      const lbTouchEndX = e.changedTouches[0].screenX;
+      const diff = lbTouchStartX - lbTouchEndX;
+      if (Math.abs(diff) > 40 && currentGallery.length > 1) {
+        if (diff > 0) lightboxNext();
+        else lightboxPrev();
+      }
+    }, { passive: true });
 
     // 2. Filter Tabs & Deep-link Routing
     const HASH_ROUTES = {
