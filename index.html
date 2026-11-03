@@ -209,8 +209,13 @@
 <!-- ========================================================================= -->
 <!-- TOPBAR DÀNH CHO MEETING & TRÌNH CHIẾU KHÁCH HÀNG (EASY AI STYLE) -->
 <!-- ========================================================================= -->
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 transition-all no-print">
-<div class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 min-h-[72px] py-1.5 flex items-center justify-between gap-3">
+<!-- ========================================================================= -->
+<!-- UNIFIED STICKY HEADER & FULL-WIDTH TAB NAVIGATION BAR -->
+<!-- ========================================================================= -->
+<header class="sticky top-0 z-40 w-full transition-all no-print shadow-xs">
+  <!-- Brand & Profile Action Bar (Full-Width White Container) -->
+  <div class="w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80">
+    <div class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 min-h-[72px] py-1.5 flex items-center justify-between gap-3">
 <!-- Brand & Title -->
 <div class="flex items-center gap-2.5 sm:gap-3 min-w-0">
 <a class="size-[48px] sm:size-[64px] shrink-0 hover:scale-105 transition-transform block" href="#" title="Văn Vạn — Vạn Chuyển Đổi">
@@ -231,14 +236,12 @@
 </a>
 </div>
 </div>
-</header>
-<!-- ========================================================================= -->
-<!-- MAIN CONTAINER (CHUẨN MAX-WIDTH 1280PX EASY AI) -->
-<!-- ========================================================================= -->
-<main class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 pt-1.5 pb-4 sm:pt-2 sm:pb-6 flex-1 space-y-6">
-<!-- INTERACTIVE FILTER TABS (EASY AI STYLE) -->
-<nav class="sticky top-[73px] sm:top-[79px] z-30 bg-slate-50/95 backdrop-blur-md pt-1 pb-2 sm:pt-1.5 sm:pb-2.5 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-slate-200 shadow-2xs no-print flex items-center gap-2 overflow-x-auto no-scrollbar">
-<div class="flex items-center gap-2 shrink-0">
+  </div>
+
+  <!-- Interactive Filter Tabs (Full-Width Light Green Container & Border) -->
+  <nav class="w-full bg-[#f0fdf4]/95 backdrop-blur-md border-b border-emerald-200/80">
+    <div class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-1.5 sm:py-2 flex items-center gap-2 overflow-x-auto no-scrollbar">
+      <div class="flex items-center gap-2 shrink-0">
 <button class="filter-btn active rounded-[40px]" data-category="all" onclick="filterCategory('all', this)">
 <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><rect height="7" rx="1" width="7" x="3" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="3"></rect><rect height="7" rx="1" width="7" x="14" y="14"></rect><rect height="7" rx="1" width="7" x="3" y="14"></rect></svg> Tất Cả Hồ Sơ
         </button>
@@ -261,7 +264,15 @@
 <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path><path d="M8 12a2 2 0 0 0 2-2V8H8m6 4a2 2 0 0 0 2-2V8h-2"></path></svg> Cảm Nhận Khách Hàng
         </button>
 </div>
-</nav>
+    </div>
+  </nav>
+</header>
+<!-- ========================================================================= -->
+<!-- MAIN CONTAINER (CHUẨN MAX-WIDTH 1280PX EASY AI) -->
+<!-- ========================================================================= -->
+<main class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 pt-1.5 pb-4 sm:pt-2 sm:pb-6 flex-1 space-y-6">
+<!-- INTERACTIVE FILTER TABS (EASY AI STYLE) -->
+<!-- Interactive tabs moved to unified full-width sticky header above -->
 <section class="category-block bg-white border border-slate-200 rounded-3xl p-4 sm:p-6 lg:p-8 shadow-xs space-y-5 sm:space-y-6" id="section-profile">
 <!-- PHẦN 1 — MỞ ĐẦU: CÂU CHUYỆN CỦA TÔI -->
 <div class="border-b border-slate-100 pb-5 sm:pb-6">
