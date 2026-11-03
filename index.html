@@ -93,7 +93,7 @@
       align-items: center;
       justify-content: center;
       padding: 0.45rem 0.95rem;
-      border-radius: 0.625rem;
+      border-radius: 40px;
       font-size: 0.75rem;
       font-weight: 600;
       line-height: 1rem;
@@ -245,30 +245,30 @@
   <!-- ========================================================================= -->
   <!-- MAIN CONTAINER (CHUẨN MAX-WIDTH 1280PX EASY AI) -->
   <!-- ========================================================================= -->
-  <main class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 py-4 sm:py-6 flex-1 space-y-6">
+  <main class="max-w-[1280px] w-full mx-auto px-4 sm:px-6 pt-1.5 pb-4 sm:pt-2 sm:pb-6 flex-1 space-y-6">
 
     <!-- INTERACTIVE FILTER TABS (EASY AI STYLE) -->
-    <nav class="sticky top-[73px] sm:top-[79px] z-30 bg-slate-50/95 backdrop-blur-md pt-3.5 pb-2.5 sm:pt-4 sm:pb-3 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-slate-200 shadow-2xs no-print flex items-center gap-2 overflow-x-auto no-scrollbar">
+    <nav class="sticky top-[73px] sm:top-[79px] z-30 bg-slate-50/95 backdrop-blur-md pt-1 pb-2 sm:pt-1.5 sm:pb-2.5 -mx-4 px-4 sm:-mx-6 sm:px-6 border-b border-slate-200 shadow-2xs no-print flex items-center gap-2 overflow-x-auto no-scrollbar">
       <div class="flex items-center gap-2 shrink-0">
-        <button data-category="all" onclick="filterCategory('all', this)" class="filter-btn active">
+        <button data-category="all" onclick="filterCategory('all', this)" class="filter-btn active rounded-[40px]">
           <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg> Tất Cả Hồ Sơ
         </button>
-        <button data-category="profile" onclick="filterCategory('profile', this)" class="filter-btn">
+        <button data-category="profile" onclick="filterCategory('profile', this)" class="filter-btn rounded-[40px]">
           <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Câu Chuyện Nghề
         </button>
-        <button data-category="websites" onclick="filterCategory('websites', this)" class="filter-btn">
+        <button data-category="websites" onclick="filterCategory('websites', this)" class="filter-btn rounded-[40px]">
           <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20M2 12h20"/></svg> Website (13)
         </button>
-        <button data-category="landing-pages" onclick="filterCategory('landing-pages', this)" class="filter-btn">
+        <button data-category="landing-pages" onclick="filterCategory('landing-pages', this)" class="filter-btn rounded-[40px]">
           <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4M10 9H8m8 4H8m8 4H8"/></svg> Landing Page (26)
         </button>
-        <button data-category="google-ads" onclick="filterCategory('google-ads', this)" class="filter-btn">
+        <button data-category="google-ads" onclick="filterCategory('google-ads', this)" class="filter-btn rounded-[40px]">
           <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg> Google Ads
         </button>
-        <button data-category="seo" onclick="filterCategory('seo', this)" class="filter-btn">
+        <button data-category="seo" onclick="filterCategory('seo', this)" class="filter-btn rounded-[40px]">
           <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg> SEO
         </button>
-        <button data-category="feedback" onclick="filterCategory('feedback', this)" class="filter-btn">
+        <button data-category="feedback" onclick="filterCategory('feedback', this)" class="filter-btn rounded-[40px]">
           <svg class="size-4 shrink-0 inline-block mr-1.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 12a2 2 0 0 0 2-2V8H8m6 4a2 2 0 0 0 2-2V8h-2"/></svg> Cảm Nhận Khách Hàng
         </button>
       </div>
