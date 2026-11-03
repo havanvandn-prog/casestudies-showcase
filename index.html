@@ -193,7 +193,7 @@
       --lh-hero-title: 1.25;     /* Tiêu đề chính lớn H1 (mặc định: 1.25) */
       --lh-section-title: 1.35;  /* Tiêu đề mục Section H2, H3 (mặc định: 1.35) */
       --lh-card-title: 1.38;     /* Tiêu đề thẻ Card H4 dự án (mặc định: 1.38) */
-      --lh-body-text: 1.625;     /* Đoạn văn mô tả, văn bản thường P (mặc định: 1.625) */
+      --lh-body-text: 1.7rem;     /* Đoạn văn mô tả, văn bản thường P (mặc định: 1.625) */
       --lh-card-desc: 1.45;      /* Nội dung Bài toán / Giải pháp trong thẻ Card (mặc định: 1.45) */
       --lh-badge-btn: 1.2;       /* Nút bấm, Tag lọc, Badge (mặc định: 1.2) */
     }
@@ -203,7 +203,8 @@
     h2, h3 { line-height: var(--lh-section-title) !important; }
     .website-card .zoomable-img { aspect-ratio: var(--thumb-aspect, 16 / 9) !important; }
     .website-card h4, .landing-card h4, article h4 { line-height: var(--lh-card-title) !important; }
-    p { line-height: var(--lh-body-text); }
+    p { line-height: var(--lh-body-text, 1.7rem); }
+    .leading-[1.7rem] { line-height: 1.7rem; }
     .website-card p, .landing-card p, article ul li span { line-height: var(--lh-card-desc) !important; }
     .filter-btn, .web-filter-btn, .lp-filter-btn { line-height: var(--lh-badge-btn) !important; }
 
@@ -287,22 +288,22 @@
               “Tôi bắt đầu từ những Website đẹp. Nhưng điều tôi thực sự theo đuổi là giá trị chúng mang lại cho việc kinh doanh của khách hàng.”
             </h2>
             
-            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p class="text-slate-600">
               Khi bắt đầu làm Digital Marketing, tôi đặc biệt yêu thích việc tạo ra những giao diện đẹp mắt, sắp xếp bố cục hài hòa và mang đến trải nghiệm tốt cho người truy cập Website.
             </p>
             
-            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p class="text-slate-600">
               Nhưng càng làm, tôi càng trăn trở về một câu hỏi:
             </p>
 
             <!-- Điểm nhấn Typography -->
             <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50/80 border-l-4 border-emerald-600 text-emerald-950 my-4 shadow-2xs">
-              <p class="text-base sm:text-lg font-bold italic leading-relaxed">
+              <p class="text-base sm:text-lg font-bold italic leading-[1.7rem]">
                 “Điều gì khiến khách hàng không chỉ xem một Website, mà còn tin tưởng và quyết định mua hàng?”
               </p>
             </div>
 
-            <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            <p class="text-slate-600">
               Tôi nhận ra rằng giao diện đẹp chỉ là điểm bắt đầu. Để Website thực sự có giá trị, doanh nghiệp cần hiểu khách hàng, truyền tải đúng thông điệp và đưa sản phẩm đến đúng người vào đúng thời điểm.
             </p>
           </div>
@@ -344,7 +345,7 @@
           Từ thiết kế giao diện đến xây dựng hệ thống tăng trưởng
         </h3>
 
-        <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed w-full">
+        <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-[1.7rem] w-full">
           <p>
             Sau hơn 7 năm làm việc trong lĩnh vực Digital Marketing, cùng 2 năm kinh nghiệm Technical SEO, tôi dần nhìn Website dưới một góc độ rộng hơn: không phải một sản phẩm đứng độc lập, mà là một phần trong hệ thống phát triển kinh doanh.
           </p>
@@ -439,13 +440,13 @@
                 </div>
               </div>
 
-              <p class="text-xs text-slate-600 leading-relaxed">
+              <p class="text-xs text-slate-600 leading-[1.7rem]">
                 <strong>Giải pháp:</strong> Landing Page kết hợp Google Ads.
               </p>
               
-              <div class="p-3 bg-emerald-50/70 border border-emerald-100 rounded-xl">
+              <div class="p-3 bg-emerald-50/70 border border-emerald-100 rounded-xl min-h-[104px] flex flex-col justify-between">
                 <span class="text-[11px] text-slate-500 block">Kết quả nổi bật:</span>
-                <span class="text-sm font-black text-emerald-800">Hơn 200 khách hàng từ kênh quảng cáo</span>
+                <span class="text-sm font-black text-emerald-800 min-h-[2.5rem] flex items-center leading-snug">Hơn 200 khách hàng từ kênh quảng cáo</span>
                 <span class="text-xs text-emerald-700 block mt-0.5 font-medium">(Thực tế 602 chuyển đổi đặt phòng)</span>
               </div>
             </div>
@@ -486,13 +487,13 @@
                 </div>
               </div>
 
-              <p class="text-xs text-slate-600 leading-relaxed">
+              <p class="text-xs text-slate-600 leading-[1.7rem]">
                 <strong>Giải pháp:</strong> Tối ưu giao diện và cấu trúc SEO của Website.
               </p>
               
-              <div class="p-3 bg-blue-50/70 border border-blue-100 rounded-xl">
+              <div class="p-3 bg-blue-50/70 border border-blue-100 rounded-xl min-h-[104px] flex flex-col justify-between">
                 <span class="text-[11px] text-slate-500 block">Kết quả nổi bật:</span>
-                <span class="text-sm font-black text-blue-800">Lượng truy cập Website tăng 200%</span>
+                <span class="text-sm font-black text-blue-800 min-h-[2.5rem] flex items-center leading-snug">Lượng truy cập Website tăng 200%</span>
                 <span class="text-xs text-blue-700 block mt-0.5 font-medium">(Từ 48 lên 6.120 lượt nhấp từ Google)</span>
               </div>
             </div>
@@ -533,13 +534,13 @@
                 </div>
               </div>
 
-              <p class="text-xs text-slate-600 leading-relaxed">
+              <p class="text-xs text-slate-600 leading-[1.7rem]">
                 <strong>Giải pháp:</strong> Landing Page kết hợp Google Ads.
               </p>
               
-              <div class="p-3 bg-purple-50/70 border border-purple-100 rounded-xl">
+              <div class="p-3 bg-purple-50/70 border border-purple-100 rounded-xl min-h-[104px] flex flex-col justify-between">
                 <span class="text-[11px] text-slate-500 block">Kết quả nổi bật:</span>
-                <span class="text-sm font-black text-purple-800">Khách tăng 300% & +32 Tr/tháng</span>
+                <span class="text-sm font-black text-purple-800 min-h-[2.5rem] flex items-center leading-snug">Khách tăng 300% & +32 Tr/tháng</span>
                 <span class="text-xs text-purple-700 block mt-0.5 font-medium">(Doanh thu tăng thêm 32 triệu đồng/tháng)</span>
               </div>
             </div>
@@ -570,7 +571,7 @@
           Điều tôi muốn xây dựng không chỉ là một dự án
         </h3>
 
-        <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-relaxed w-full">
+        <div class="space-y-4 text-sm sm:text-base text-slate-600 leading-[1.7rem] w-full">
           <p>
             Sau hơn hai năm hoạt động Freelancer toàn thời gian, điều khiến tôi trân trọng là nhiều công việc mới đến từ khách hàng cũ và những lời giới thiệu của họ.
           </p>
@@ -584,7 +585,7 @@
 
         <!-- Câu Kết Nhấn Mạnh Typography -->
         <div class="p-5 sm:p-6 rounded-2xl bg-emerald-50/80 border border-emerald-200 my-4 shadow-2xs">
-          <p class="text-base sm:text-lg lg:text-xl font-bold text-emerald-950 leading-relaxed">
+          <p class="text-base sm:text-lg lg:text-xl font-bold text-emerald-950 leading-[1.7rem]">
             “Tôi không chỉ muốn trở thành người xây dựng Website cho bạn. Tôi muốn là người đồng hành cùng bạn tìm ra cách để Website tạo ra giá trị cho hoạt động kinh doanh.”
           </p>
         </div>
@@ -599,7 +600,7 @@
                 <span class="font-bold text-slate-900 text-xs sm:text-sm">Chị Thảo (SuNam Spa)</span>
                 <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">Spa Du Lịch</span>
               </div>
-              <p class="italic text-slate-700 leading-relaxed">
+              <p class="italic text-slate-700 leading-[1.7rem]">
                 "Cả 2 tuần nay full phòng liên tục không kịp nghỉ, khách khen web đặt phòng mượt lắm em."
               </p>
             </div>
@@ -626,7 +627,7 @@
                 <span class="font-bold text-slate-900 text-xs sm:text-sm">Chị Quỳnh Lee (Phúc Lee Studio)</span>
                 <span class="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full border border-blue-200/60">Ảnh Cưới VIP</span>
               </div>
-              <p class="italic text-slate-700 leading-relaxed">
+              <p class="italic text-slate-700 leading-[1.7rem]">
                 "Khách gọi từ web chốt gói VIP tăng hẳn, chi phí quảng cáo lại giảm hơn trước nhiều."
               </p>
             </div>
@@ -653,7 +654,7 @@
                 <span class="font-bold text-slate-900 text-xs sm:text-sm">Anh Hà Duy (HaFood B2B)</span>
                 <span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-full border border-amber-200/60">Nông Sản Sỉ</span>
               </div>
-              <p class="italic text-slate-700 leading-relaxed">
+              <p class="italic text-slate-700 leading-[1.7rem]">
                 "Tập trung đúng nhóm khách sỉ, đơn hàng quà tặng doanh nghiệp nổ đều đặn."
               </p>
             </div>
@@ -684,7 +685,7 @@
             <h4 class="text-lg sm:text-xl font-extrabold text-slate-900 leading-snug">
               Nếu bạn đang tìm kiếm một giải pháp Website gắn với mục tiêu phát triển kinh doanh, tôi mong có cơ hội được lắng nghe câu chuyện của bạn.
             </h4>
-            <p class="text-xs text-slate-600 leading-relaxed">
+            <p class="text-xs text-slate-600 leading-[1.7rem]">
               Hãy cùng trao đổi trực tiếp về hiện trạng doanh nghiệp, định hướng từ khóa và phương án tối ưu chuyển đổi phù hợp nhất.
             </p>
           </div>
@@ -831,7 +832,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://hutieuhongphat.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://hutieuhongphat.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -904,7 +905,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://hdi.havanvan.id.vn/" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://hdi.havanvan.id.vn/" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -977,7 +978,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://kstudy.edu.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://kstudy.edu.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1050,7 +1051,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://gialoi.com.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://gialoi.com.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1123,7 +1124,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://chinhtamretail.havanvan.id.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://chinhtamretail.havanvan.id.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1196,7 +1197,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://alphatic.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://alphatic.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1269,7 +1270,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://darainen.havanvan.id.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://darainen.havanvan.id.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1342,7 +1343,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://baobiphuquan.havanvan.id.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://baobiphuquan.havanvan.id.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1415,7 +1416,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://thepalmix.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://thepalmix.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1488,7 +1489,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://brando.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://brando.vn" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1561,7 +1562,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://nongnghiepxanhhn.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://nongnghiepxanhhn.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1634,7 +1635,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://hoangduongland.vn/" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://hoangduongland.vn/" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1783,7 +1784,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://print2teach.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://print2teach.com" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1856,7 +1857,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/vstep" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/vstep" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -1929,7 +1930,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://www.havanvan.id.vn/tieng-anh-dau-xanh" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://www.havanvan.id.vn/tieng-anh-dau-xanh" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2002,7 +2003,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/khoa-hoc-tieng-anh-curvy-english" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/khoa-hoc-tieng-anh-curvy-english" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2075,7 +2076,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/demokesielts" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/demokesielts" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2148,7 +2149,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/hdi-demo" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/hdi-demo" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2221,7 +2222,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/khoahocomsoha" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/khoahocomsoha" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2294,7 +2295,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/khoa-hoc-tiktok-ads-phan-duc-nho" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/khoa-hoc-tiktok-ads-phan-duc-nho" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2367,7 +2368,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/demo-khoa-hoc-yoga" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/demo-khoa-hoc-yoga" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2440,7 +2441,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/demo-tai-chinh-19092025" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/demo-tai-chinh-19092025" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2513,7 +2514,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/x2-doanh-so-nha-thuoc" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/x2-doanh-so-nha-thuoc" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2586,7 +2587,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/khoahocai" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/khoahocai" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2659,7 +2660,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/demo-fitness-james" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/demo-fitness-james" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2732,7 +2733,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/demo-khoa-hoc-tieu-dung-xanh" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/demo-khoa-hoc-tieu-dung-xanh" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2805,7 +2806,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/khoahocsophongthuyver2" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/khoahocsophongthuyver2" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2878,7 +2879,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/khoa-hoc-ai-duong-thanh-son" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/khoa-hoc-ai-duong-thanh-son" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -2951,7 +2952,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/kinh-doanh-1000x" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/kinh-doanh-1000x" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3024,7 +3025,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/nguyenhuuson-19092025" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/nguyenhuuson-19092025" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3097,7 +3098,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/dieu-quan-trong-nhat" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/dieu-quan-trong-nhat" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3170,7 +3171,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/kien-truc-su-cap-2" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/kien-truc-su-cap-2" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3243,7 +3244,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/trang-chu-kstudy" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/trang-chu-kstudy" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3316,7 +3317,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/ban-hang-dot-pha" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/ban-hang-dot-pha" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3389,7 +3390,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/nghe-thuat-xu-ly-tu-choi" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/nghe-thuat-xu-ly-tu-choi" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3462,7 +3463,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/chuong-trinh-master-kinh-doanh" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/chuong-trinh-master-kinh-doanh" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3535,7 +3536,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/phan-than-so" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/phan-than-so" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3608,7 +3609,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/chay-no-nang-cao" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/chay-no-nang-cao" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3681,7 +3682,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://landing.havanvan.id.vn/van-anh" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://landing.havanvan.id.vn/van-anh" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3754,7 +3755,7 @@
               <svg class="size-3.5 text-slate-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
               Phóng to
             </button>
-            <a href="https://gialoi.com.vn/business-profile/" target="_blank" rel="noopener noreferrer" class="bg-emerald-50 text-emerald-800 hover:bg-emerald-100 hover:text-emerald-900 border border-emerald-300/80 text-xs font-black px-3 py-1.5 rounded-xl transition-all flex items-center gap-1 shrink-0 shadow-2xs">
+            <a href="https://gialoi.com.vn/business-profile/" target="_blank" rel="noopener noreferrer" class="bg-emerald-800 text-white hover:bg-emerald-900 border border-emerald-800 hover:border-emerald-900 text-xs font-bold px-3.5 py-1.5 rounded-[200px] transition-all flex items-center gap-1.5 shrink-0 shadow-xs cursor-pointer">
               <span>Truy cập web</span>
               <svg class="size-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
             </a>
@@ -3877,7 +3878,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-[1.7rem]">
               <strong class="font-bold block text-amber-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-amber-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Kết quả thực tế từ chủ cơ sở:</strong>
               "Khách đặt lịch kín phòng, nhân viên làm không kịp nghỉ ('quén khách'). Cơ sở vận hành 100% công suất trong mùa cao điểm."
             </div>
@@ -3969,7 +3970,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-[1.7rem]">
               <strong class="font-bold block text-amber-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-amber-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Minh chứng từ Giám đốc Hà Duy:</strong>
               "Chốt liên tiếp các đơn sỉ 10, 50, 66 hộp bánh trực tiếp từ khách điền form trên Landing Page ngay trong mùa vụ."
             </div>
@@ -4065,7 +4066,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-[1.7rem]">
               <strong class="font-bold block text-amber-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-amber-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Lời thoại thực tế từ Chị Quỳnh Lee:</strong>
               "1/3 so với từ khi gặp em nè!... Khách ở Furama Resort hỏi là chốt hết, vừa chốt 1 khách đặt 3 gói 6.400k trong khi ads tốn chưa tới 100k."
             </div>
@@ -4162,7 +4163,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-[1.7rem]">
               <strong class="font-bold block text-amber-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-amber-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Phản hồi từ Quản lý Tuyển sinh FEC:</strong>
               "Landing Page mới giúp đội tư vấn chốt tour nhẹ nhàng hơn hẳn. Phụ huynh để lại form là đã chọn sẵn quốc gia và hiểu rõ lịch trình, tỷ lệ nghe máy và đặt cọc giữ chỗ tăng vượt kỳ vọng."
             </div>
@@ -4254,7 +4255,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 leading-[1.7rem]">
               <strong class="font-bold block text-amber-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-amber-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Phản hồi từ Chị Thảo Eyelash:</strong>
               "Booking tự động nổ đều đặn mỗi ngày qua WhatsApp. Khách Tây đến trải nghiệm xong còn giới thiệu bạn bè cùng đi."
             </div>
@@ -4362,7 +4363,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-900 leading-[1.7rem]">
               <strong class="font-bold block text-blue-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-blue-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Tác động kinh doanh then chốt:</strong>
               Lưu lượng tìm kiếm tự nhiên tăng từ 48 clicks lên 6.120 clicks (đỉnh 120 clicks/ngày). Khách du lịch trong nước và quốc tế tìm kiếm quán trên Google đổ về ăn uống nườm nượp.
             </div>
@@ -4458,7 +4459,7 @@
               </div>
             </div>
 
-            <div class="p-3 bg-blue-50/50 rounded-xl border border-blue-200/60 text-xs text-blue-900 leading-relaxed">
+            <div class="p-3 bg-blue-50/50 rounded-xl border border-blue-200/60 text-xs text-blue-900 leading-[1.7rem]">
               <strong class="block text-blue-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-blue-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Tác động kinh doanh then chốt:</strong>
               Biểu đồ tăng trưởng ổn định bền vững; mang lại 443 lượt truy cập tự nhiên có nhu cầu thực tế cao, kéo đều đặn khách du lịch quốc tế và nội địa đến trải nghiệm dịch vụ mà không tốn chi phí ads.
             </div>
@@ -4547,7 +4548,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-900 leading-[1.7rem]">
               <strong class="font-bold block text-blue-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-blue-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Tác động kinh doanh then chốt:</strong>
               Toàn bộ cụm từ khóa thương hiệu và dịch vụ công nghệ then chốt vào Top Trang 1 Google, mang lại nguồn Lead doanh nghiệp tự nhiên không tốn tiền ads.
             </div>
@@ -4643,7 +4644,7 @@
               </div>
             </div>
 
-            <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-900 leading-relaxed">
+            <div class="p-3 rounded-xl bg-blue-50/70 border border-blue-200/80 text-xs text-blue-900 leading-[1.7rem]">
               <strong class="font-bold block text-blue-950 mb-0.5"><svg class="size-4 shrink-0 inline-block mr-1.5 text-blue-600 align-text-bottom" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg> Tác động kinh doanh then chốt:</strong>
               Chiếm lĩnh vị trí Top 4,4 Google cho các dịch vụ nối mi, uốn mi; hút đều đặn tệp khách du lịch nước ngoài (Úc, Mỹ, Hàn, châu Âu) đến tiệm trải nghiệm mà không tốn một đồng chi phí quảng cáo.
             </div>
@@ -5046,7 +5047,7 @@
       <div class="flex items-center justify-center gap-2 text-slate-700 font-bold">
         <span>VĂN VẠN — PERFORMANCE DIGITAL MARKETING & SEO GROWTH SPECIALIST</span>
       </div>
-      <p class="text-slate-400 max-w-xl mx-auto leading-relaxed">
+      <p class="text-slate-400 max-w-xl mx-auto leading-[1.7rem]">
         Tài liệu hồ sơ năng lực thực chiến được xây dựng theo chuẩn Easy AI Design System. Toàn bộ hình ảnh, biểu đồ và trích dẫn hội thoại đều được bảo chứng 100% từ kết quả triển khai thực tế.
       </p>
     </footer>
