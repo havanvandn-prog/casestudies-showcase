@@ -4027,16 +4027,16 @@
   <!-- ========================================================================= -->
   <!-- INTERACTIVE LIGHTBOX MODAL -->
   <!-- ========================================================================= -->
-  <div id="lightboxModal" class="fixed inset-0 z-50 bg-slate-950/90 backdrop-blur-md hidden flex flex-col items-center justify-center p-4 sm:p-6 no-print" onclick="hideLightbox()">
-    <div class="relative max-w-5xl w-full max-h-[92vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
-      <div class="w-full flex items-center justify-between pb-3 text-white">
+  <div id="lightboxModal" class="fixed inset-0 z-50 bg-slate-950/92 backdrop-blur-md hidden flex flex-col items-center justify-center p-2 sm:p-4 md:p-5 no-print" onclick="hideLightbox()">
+    <div class="relative max-w-6xl 2xl:max-w-7xl w-full max-h-[95vh] flex flex-col items-center justify-center" onclick="event.stopPropagation()">
+      <div class="w-full flex items-center justify-between pb-2 text-white px-2">
         <span id="lightboxCaption" class="text-xs sm:text-sm font-semibold truncate pr-4 text-slate-200">Minh chứng dự án</span>
         <button onclick="hideLightbox()" class="size-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-all shrink-0 cursor-pointer">
           <svg class="size-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
-      <div class="w-full max-h-[82vh] overflow-auto rounded-xl bg-slate-900/60 border border-white/10 flex items-center justify-center">
-        <img id="lightboxImg" src="" alt="Minh chứng phóng to" class="max-w-full max-h-[80vh] w-auto h-auto object-contain block rounded-lg shadow-2xl">
+      <div class="w-full max-h-[88vh] 2xl:max-h-[90vh] overflow-auto rounded-xl bg-slate-900/60 border border-white/10 flex items-center justify-center p-1">
+        <img id="lightboxImg" src="" alt="Minh chứng phóng to" class="w-full h-full max-h-[86vh] sm:max-h-[88vh] 2xl:max-h-[90vh] max-w-6xl 2xl:max-w-7xl object-contain block rounded-lg shadow-2xl">
       </div>
     </div>
   </div>
