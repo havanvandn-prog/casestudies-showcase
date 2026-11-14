@@ -203,6 +203,22 @@
     .website-card p, .landing-card p, article ul li span { line-height: var(--lh-card-desc) !important; }
     .filter-btn, .web-filter-btn, .lp-filter-btn { line-height: var(--lh-badge-btn) !important; }
 
+    /* ========================================================================= */
+    /* CHẾ ĐỘ XEM TAB CON RIÊNG BIỆT (SINGLE-TAB-MODE) */
+    /* Triệt tiêu hoàn toàn khoảng hở trống phía trên khi chuyển giữa các tab con */
+    /* ========================================================================= */
+    .single-tab-mode > .category-block:not(#section-profile) {
+      margin-top: 0 !important;
+      padding-top: 0.5rem !important; /* 8px trên mobile */
+    }
+    @media (min-width: 640px) {
+      .single-tab-mode > .category-block:not(#section-profile) {
+        padding-top: 0.75rem !important; /* 12px trên tablet & desktop */
+      }
+    }
+    .single-tab-mode > #section-profile {
+      margin-top: 0.5rem !important;
+    }
 </style>
 </head>
 <body class="selection:bg-emerald-100 selection:text-emerald-900 min-h-screen flex flex-col">
@@ -4010,8 +4026,9 @@
       've-toi': { cat: 'profile', target: 'section-profile' },
       'websites': { cat: 'websites', target: 'section-websites' },
       'website': { cat: 'websites', target: 'section-websites' },
-      'landing': { cat: 'websites', target: 'section-websites' },
-      'landing-page': { cat: 'websites', target: 'section-websites' },
+      'landing-pages': { cat: 'landing-pages', target: 'section-landing-pages' },
+      'landing-page': { cat: 'landing-pages', target: 'section-landing-pages' },
+      'landing': { cat: 'landing-pages', target: 'section-landing-pages' },
       'google-ads': { cat: 'google-ads', target: 'section-google-ads' },
       'ads': { cat: 'google-ads', target: 'section-google-ads' },
       'googleads': { cat: 'google-ads', target: 'section-google-ads' },
@@ -4088,7 +4105,10 @@
       // Biến theo dõi danh mục hiện tại
       currentCategory = category;
 
+      const mainEl = document.querySelector('main');
+
       if (category === 'all') {
+        if (mainEl) mainEl.classList.remove('single-tab-mode');
         Object.values(sections).forEach(sec => {
           if (sec) sec.style.display = 'block';
         });
@@ -4107,6 +4127,7 @@
         if (lpSeeMore) lpSeeMore.style.display = 'flex';
 
       } else {
+        if (mainEl) mainEl.classList.add('single-tab-mode');
         Object.keys(sections).forEach(key => {
           if (sections[key]) {
             sections[key].style.display = (key === category) ? 'block' : 'none';
@@ -4126,28 +4147,38 @@
         }
       }
 
-      // 5. Cuộn mượt đến nội dung cần xem (trừ khoảng cách 125px của 2 thanh sticky header)
+      // 5. Cuộn mượt đến nội dung cần xem
       setTimeout(() => {
-        let scrollTarget = null;
-        if (targetElementId) {
-          scrollTarget = document.getElementById(targetElementId);
-        } else if (category !== 'all') {
-          scrollTarget = sections[category];
+        // Kiểm tra xem target có phải là chính section hay xem tổng quát tab không
+        const isSectionTarget = !targetElementId || 
+                                targetElementId === 'section-' + category || 
+                                targetElementId === category ||
+                                (sections[category] && targetElementId === sections[category].id);
+
+        if (isSectionTarget) {
+          // Cuộn lên đỉnh trang: Sticky Header ghim sát mép trên, nội dung section nằm ngay dưới thanh tab không khoảng hở thừa
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+          return;
         }
 
+        // Trường hợp trỏ đích danh một case study hoặc card cụ thể bên trong section
+        const scrollTarget = document.getElementById(targetElementId);
         if (scrollTarget) {
-          const headerOffset = 125;
+          const headerEl = document.querySelector('header');
+          const headerOffset = headerEl ? headerEl.offsetHeight : 120;
           const elementPosition = scrollTarget.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition = elementPosition + window.pageYOffset - headerOffset - 12;
           window.scrollTo({
-            top: offsetPosition,
+            top: Math.max(0, offsetPosition),
             behavior: 'smooth'
           });
         }
       }, 50);
     }
 
-    // Tự động nhận diện URL Hash khi khách mở link
     function parseHashAndActivate() {
       const hash = (window.location.hash || '').replace('#', '').trim().toLowerCase();
       if (!hash) {
